@@ -184,5 +184,82 @@ console.log(diferencaDias(data1, data2));
 
 /*
 Questão 13 v2
+
+const hoje = new Date();
+
+hoje.setDate(hoje.getDate() + 100);
+
+console.log(hoje);
+
 */
 
+/*
+Questão 14
+
+let conta = {
+    titular: 'gabriel',
+    saldo: 15000,
+
+    depositar(valor) {
+        if (valor > 0) {
+            this.saldo += valor;
+            console.log(`Depósito de R$${valor} realizado com sucesso.`);
+        } else {
+            console.log('O valor do depósito deve ser positivo.');
+        }
+    },
+
+    sacar(valor) {
+        if (valor > 0) {
+            if (valor <= this.saldo) {
+                this.saldo -= valor;
+                console.log(`Saque de R$${valor} realizado com sucesso.`);
+            } else {
+                console.log('Saldo insuficiente.');
+            }
+        } else {
+            console.log('O valor do saque deve ser positivo.');
+        }
+    },
+
+    verSaldo() {
+        console.log(`Saldo atual: R$${this.saldo}`);
+    }
+};
+
+conta.verSaldo();      
+conta.depositar(1000);  
+conta.sacar(2000);      
+conta.verSaldo();
+*/
+
+/*
+Questão 15
+
+let frutas = ["Maçã", "Banana, Laranja"];
+let frutasSeparadas = frutas[1].split(", ");
+console.log(frutasSeparadas[0]);
+frutas.push("Manga");
+console.log(frutas);
+let primeiraFruta = frutas.shift();
+console.log(frutas);
+
+// ----------------------------15-------------------------------
+
+let frutas2 = ["Maçã", "Banana", "Laranja"];
+
+frutas.push("Manga");
+
+let primeiraFruta2 = frutas.shift();
+
+console.log("Usando loop for:");
+for (let i = 0; i < frutas.length; i++) {
+    console.log(frutas[i]);
+}
+
+console.log("Usando forEach:");
+frutas.forEach(function(fruta) {
+    console.log(fruta);
+});
+
+*/
